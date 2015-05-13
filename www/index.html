@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>WYSIWYG Editor</title>
+</head>
+<body>
+    <button id ="underline">Underline Text</button>
+    <button id ="link" >Link</button>
+    <button id ="code" value = "html">Display HTML</button>
+    <!-- Make it content editable attribute true so that we can edit inside the div tag and also enable execCommand to edit content inside it.-->
+    <div class="editor" id="editor" contenteditable="true" spellcheck="true">
+        This is the text editor
+    </div>
+    
+    <script data-main="app" src="lib/require.js"></script>
+</body>
+</html>
