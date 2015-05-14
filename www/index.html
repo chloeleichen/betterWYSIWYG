@@ -1,17 +1,30 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>WYSIWYG Editor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<title>Better WYSIWYG Editor</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/6.0.0/basscss.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="src/css/styles.css" />
+<script data-main="src/js/app" src="src/js/lib/require.js"></script>
 </head>
-<body>
-    <button id ="underline">Underline Text</button>
-    <button id ="link" >Link</button>
-    <button id ="code" value = "html">Display HTML</button>
+<body class="container p2 mx-auto mt4">
+<ul class="toolbar list-reset">
+    <li class="inline"><button id ="underline"> Underline</button></li>
+    <li class="inline"><button id ="bold"> Bold</button></li>
+    <li class="inline"><button id ="italic"> Italic</button></li>
+    <li class="inline"><button id ="strikethrough"> StrikeThrough</button></li>
+    <li class="inline"><button id ="code" value = "html"> Display HTML</button></li>
+</ul>
     <!-- Make it content editable attribute true so that we can edit inside the div tag and also enable execCommand to edit content inside it.-->
-    <div class="editor" id="editor" contenteditable="true" spellcheck="true">
+    <div class="editor border p1" id="editor" contenteditable="true" spellcheck="true">
         This is the text editor
     </div>
     
-    <script data-main="app" src="lib/require.js"></script>
 </body>
+<script type="text/javascript">
+//script placeholder
+</script>
 </html>
