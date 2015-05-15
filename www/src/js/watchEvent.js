@@ -23,6 +23,7 @@ define([
 						button.disabled = true;	
 					}else {
 						var command = this.dataset.event;
+						//button.classList.toggle("active")
 						editor(button, command);						
 					}
 				});

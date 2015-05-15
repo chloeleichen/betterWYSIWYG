@@ -13,10 +13,20 @@ button{
 }
 
 button:focus{
+	outline: none;	
+}
+
+.button-outline:focus{
+	box-shadow: none;
 	outline: none;
 }
 
-.button-outline.is-disabled, .button-outline:disabled, .code-mode button, button:disabled{
+.button-outline.active{
+	background: purple;
+	color: #fff;
+}
+
+.button-outline.is-disabled, .button-outline:disabled, .code-mode li button, button:disabled{
 	color: #ddd;
 	opacity: 1;
 	cursor: not-allowed;
@@ -34,4 +44,12 @@ button:focus{
 
 .code-mode #code{
 	background: green;
+	color: #fff;
+}
+
+.code-mode #editor{
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	font-family: monospace;
+	padding: 1em;
 }

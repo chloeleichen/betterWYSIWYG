@@ -3,7 +3,7 @@ define([
 	
 	],function (toggleCode) {
     return function(button,cmd){
-    	//List of valid commands for direct editing
+    	//List of valid simple commands for direct editing
     	var commands = ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript',
                     'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull',
                     'formatBlock', 'removeFormat',
@@ -14,8 +14,21 @@ define([
 
         else{
         	switch(cmd){
+        		case "ordered-list":
+        		break;
+        		case "unordered-list":
+        		break;
+        		case 'outdent':
+        		break;
+        		case 'indent':
+        		break;
+        		case 'link':
+        		break;
+        		case 'image':
+        		break;
+        		default:
+        		return;
         		
-
         	}
         }
 
