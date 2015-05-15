@@ -3,6 +3,10 @@
 
 }
 
+button:focus{
+	outline: none;
+}
+
 .editor:focus{
 	outline: none;
 }

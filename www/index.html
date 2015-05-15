@@ -11,12 +11,20 @@
 <script data-main="src/js/app" src="src/js/lib/require.js"></script>
 </head>
 <body class="container p2 mx-auto mt4">
-<ul class="toolbar list-reset">
-    <li class="inline"><button id ="underline"> Underline</button></li>
-    <li class="inline"><button id ="bold"> Bold</button></li>
-    <li class="inline"><button id ="italic"> Italic</button></li>
-    <li class="inline"><button id ="strikethrough"> StrikeThrough</button></li>
-    <li class="inline"><button id ="code" value = "html"> Display HTML</button></li>
+<ul class="toolbar list-reset" id="button-container">
+    <li class="inline"><button data-event="underline" class="button-outline purple"> <i class="fa fa-underline"></i> </button></li>
+    <li class="inline"><button data-event="bold" class="button-outline purple"> <i class="fa fa-bold"></i></button></li>
+    <li class="inline"><button data-event="italic" class="button-outline purple"> <i class="fa fa-italic"></i></button></li>
+    <li class="inline"><button data-event="strikethrough" class="button-outline purple"> <i class="fa fa-strikethrough"></i></button></li>
+    <li class="inline"><button data-event="justifyLeft" class="button-outline purple"> <i class="fa fa-align-left"></i></button></li>
+    <li class="inline"><button data-event="justifyCenter" class="button-outline purple"> <i class="fa fa-align-center"></i></button></li>
+    <li class="inline"><button data-event="justifyRight" class="button-outline purple"> <i class="fa fa-align-right"></i></button></li>
+    <li class="inline"><button data-event="justifyFull" class="button-outline purple"> <i class="fa fa-align-justify"></i></button></li>
+    <li class="inline"><button data-event="superscript" class="button-outline purple"> <i class="fa fa-superscript"></i></button></li>
+    <li class="inline"><button data-event="subscript" class="button-outline purple"> <i class="fa fa-subscript"></i></button></li>
+    <li class="inline"><button data-event="removeFormat" class="button-outline purple"> <i class="fa fa-eraser"></i></button></li>
+
+    <li class="inline"><button data-event="code" value = "html" class="button-outline purple"> <i class="fa fa-code"></i></button></li>
 </ul>
     <!-- Make it content editable attribute true so that we can edit inside the div tag and also enable execCommand to edit content inside it.-->
     <div class="editor border p1" id="editor" contenteditable="true" spellcheck="true">
