@@ -1,12 +1,37 @@
+.editor-container{
+	position: relative;
+}
+
 .editor{
 	height: 400px;
+}
 
+button{
+	width: 28px;
+	margin: auto;
+	padding: 5px;
 }
 
 button:focus{
 	outline: none;
 }
 
+.button-outline.is-disabled, .button-outline:disabled, .code-mode button, button:disabled{
+	color: #ddd;
+	opacity: 1;
+	cursor: not-allowed;
+}
+
 .editor:focus{
 	outline: none;
+}
+
+#code{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.code-mode #code{
+	background: green;
 }

@@ -4,21 +4,34 @@
 // https://newcircle.com/s/post/1096/using_the_html5_attribute_contenteditable_to_create_a_wysiwyg
 
 define([
-	'./src/js/editing/editor.js'
-	], function (editor) {
+	'./editing/editor',
+	'./editing/toggleCode',
+	'./helper/hasClass'
+	], function (editor, toggleCode, hasClass) {
 		//Native commands that does not require value
 		var doCommand = function(){
+			var container = document.getElementById('editor-container');
 			var buttonContainer = document.getElementById("button-container");
 			var buttons = buttonContainer.querySelectorAll('button');
+			var codeButton = document.getElementById("code");
 
 			for(var i =0, l = buttons.length; i <l; i++){
 				buttons[i].addEventListener('click', function(e){
-					e.preventDefault();
-					var command = this.dataset.event;
-					editor(command);
+					var button = this;
+					e.preventDefault();								
+					if(hasClass(container, 'code-mode') === true){
+						button.disabled = true;	
+					}else {
+						var command = this.dataset.event;
+						editor(button, command);						
+					}
 				});
 			}
+			
+			codeButton.addEventListener('click', function(e){
+				toggleCode.toggleCode(codeButton, container);
+			})
 		}
 
 		return doCommand;
-});
+	});
