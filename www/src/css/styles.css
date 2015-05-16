@@ -4,6 +4,7 @@
 
 .editor{
 	height: 400px;
+	padding: 1em;
 }
 
 button{
@@ -51,5 +52,5 @@ button:focus{
 	background: rgba(0, 0, 0, 0.8);
 	color: #fff;
 	font-family: monospace;
-	padding: 1em;
+	
 }

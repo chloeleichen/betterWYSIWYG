@@ -1,8 +1,7 @@
 // https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html
 define(function () {
     return {
-    	toggleCode: function(target, container){
-    		var editor = document.getElementById("editor");
+    	toggleCode: function(target, container, editor){
     		if (target.value == "html"){
 			    editor.textContent = editor.innerHTML;
 			    target.value = "code";

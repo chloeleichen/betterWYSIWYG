@@ -9,7 +9,7 @@ require(['domReady','watchEvent'], function (domReady, watchEvent) {
     }
     else
     {
-    	document.execCommand('styleWithCSS', false, false);
+    	document.execCommand('styleWithCSS', false, true);
     	watchEvent();
     }
 });
