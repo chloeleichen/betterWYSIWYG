@@ -6,24 +6,25 @@ define([
     	//List of valid simple commands for direct editing
     	var commands = ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript',
                     'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull',
-                    'formatBlock', 'removeFormat',
-                    'backColor', 'foreColor', 'insertHorizontalRule', 'fontName'];
+                    'removeFormat','backColor', 'foreColor', 'insertHorizontalRule', 'fontName'];
         if(commands.indexOf(cmd) > -1){
         	document.execCommand(cmd, false, null);
         }
 
         else{
         	switch(cmd){
-        		case "ordered-list":
-        		break;
-        		case "unordered-list":
-        		break;
-        		case 'outdent':
-        		break;
-        		case 'indent':
-        		break;
-        		case 'link':
-        		break;
+                case 'orderdList':
+                console.log('orderdList');
+                break;
+                case 'unorderdList':
+                console.log('unorderdList');
+                break;
+                case 'indent':
+                console.log('indent')
+                break;
+                case 'outdent':
+                console.log('outdent');
+                break;
         		case 'image':
         		break;
         		default:

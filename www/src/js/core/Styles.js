@@ -16,7 +16,7 @@ define([
 		      styleInfo['subscript'] = document.queryCommandState('subscript') ? 'subscript' : 'normal';
 		      styleInfo['justifyLeft'] = (dom.getStyle(target, "text-align") == 'left') ? 'justifyLeft' : 'normal';
 		      styleInfo['justifyRight'] = (dom.getStyle(target, "text-align") == 'right') ? 'justifyRight' : 'normal';
-		      styleInfo['justifyCenter'] = (dom.getStyle(target, "text-align") == 'center') ? 'justifyCenter' : 'normal';		      
+		      styleInfo['justifyCenter'] = (dom.getStyle(target, "text-align") == 'center') ? 'justifyCenter' : 'normal';
 		    return styleInfo;
 		}
 		return Styles;
