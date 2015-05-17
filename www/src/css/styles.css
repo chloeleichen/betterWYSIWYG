@@ -27,10 +27,13 @@ button:focus{
 	color: #fff;
 }
 
-.button-outline.is-disabled, .button-outline:disabled, .code-mode li button, button:disabled{
+
+
+.button-outline.is-disabled, .button-outline:disabled, .code-mode li button, button:disabled, .code-mode .button-outline.active{
 	color: #ddd;
 	opacity: 1;
 	cursor: not-allowed;
+	background: none;
 }
 
 .editor:focus{

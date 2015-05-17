@@ -6,9 +6,10 @@
 define([
 	'./editing/edit',
 	'./editing/toggleCode',
-	'./helper/hasClass',
-	'./core/range'
-	], function (edit, toggleCode, hasClass, range ) {
+	'./helper/dom',
+	'./core/range',
+	'./core/Button'
+	], function (edit, toggleCode, dom, range, Button ) {
 		//Native commands that does not require value
 		var doCommand = function(){
 		var container = document.getElementById('editor-container');
@@ -16,24 +17,32 @@ define([
 		var buttons = buttonContainer.querySelectorAll('button');
 		var codeButton = document.getElementById("code");
 		var editor = document.getElementById("editor");
+		var button = new Button;
 
 
 		for(var i =0, l = buttons.length; i <l; i++){
 			buttons[i].addEventListener('click', function(e){
-				var button = this;
+				var currentButton = this;
 				e.preventDefault();								
-				if(hasClass(container, 'code-mode') === true){
-					button.disabled = true;	
+				if(dom.hasClass(container, 'code-mode') === true){
+					currentButton.disabled = true;	
 				}else {
-					var command = this.dataset.event;
+					var command = this.getAttribute('id');
 					//button.classList.toggle("active")
-					edit(button, command);
-					var selection = range(command);
-					console.log(selection);
-
+					edit(currentButton, command);
+					button.update();
+					editor.focus();			
 				}
 			});
 		}
+
+		editor.addEventListener('mouseup', function(e){		
+			button.update();
+		});
+
+		editor.addEventListener('keyup', function(e){		
+			button.update();
+		});
 
 		codeButton.addEventListener('click', function(e){
 			toggleCode.toggleCode(codeButton, container, editor);

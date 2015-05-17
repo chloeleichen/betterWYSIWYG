@@ -1,5 +1,6 @@
 require(['domReady','watchEvent'], function (domReady, watchEvent) {
 	domReady(function () {
+    var editor = document.getElementById("editor");
     //This function is called once the DOM is ready.
     //It will be safe to query the DOM and manipulate
     //DOM nodes in this function.
@@ -9,7 +10,8 @@ require(['domReady','watchEvent'], function (domReady, watchEvent) {
     }
     else
     {
-    	document.execCommand('styleWithCSS', false, true);
+    	editor.focus();
+        document.execCommand('styleWithCSS', false, true);
     	watchEvent();
     }
 });

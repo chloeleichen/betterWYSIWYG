@@ -1,5 +1,5 @@
 define(function () {
-	var range = function(cmd){
+	var Range = function(){
 		var txt;
 		if (window.getSelection) {
         txt = window.getSelection();
@@ -8,8 +8,8 @@ define(function () {
     	} else if (window.document.selection) {
         txt = window.document.selection.createRange().text;
     	}
-    	return txt;
+    	return txt.focusNode;
 	}
-	return range;
+	return Range;
 
 });
