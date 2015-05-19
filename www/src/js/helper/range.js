@@ -1,5 +1,5 @@
 define(function () {
-	var Range = function(){
+	var range = function(){
 		var txt;
 		if (window.getSelection) {
         txt = window.getSelection();
@@ -10,6 +10,6 @@ define(function () {
     	}
     	return txt.focusNode;
 	}
-	return Range;
+	return range;
 
 });

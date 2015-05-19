@@ -12,7 +12,7 @@ require(['domReady','watchEvent'], function (domReady, watchEvent) {
     {
     	editor.focus();
         document.execCommand('styleWithCSS', false, true);
-    	watchEvent();
+    	watchEvent();        
     }
 });
 });

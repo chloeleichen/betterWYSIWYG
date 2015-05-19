@@ -7,7 +7,7 @@ define([
 	'./editing/edit',
 	'./editing/toggleCode',
 	'./helper/dom',
-	'./core/range',
+	'./helper/range',
 	'./core/Button'
 	], function (edit, toggleCode, dom, range, Button ) {
 		//Native commands that does not require value

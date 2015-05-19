@@ -1,8 +1,9 @@
 // https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html
-define([
-	
-	],function (toggleCode) {
+define(['module/Bullet'],function (Bullet) {
     return function(button,cmd){
+        var b = new Bullet();
+
+        console.log(b.insertOrderedList());
     	//List of valid simple commands for direct editing
     	var commands = ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript',
                     'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull',

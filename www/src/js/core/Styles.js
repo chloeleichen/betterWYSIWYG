@@ -1,10 +1,10 @@
 define([
-	'core/Range',
+	'helper/range',
 	'helper/dom'
-	],function(Range, dom){
+	],function(range, dom){
 	var Styles = function(){
 			var styleInfo = [];
-			var rgn = Range();
+			var rgn = range();
 			var target = dom.isText(rgn)? rgn.parentNode : rgn;
 
 		      // document.queryCommandState for toggle state
