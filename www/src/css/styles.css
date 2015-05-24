@@ -17,19 +17,11 @@ button:focus{
 	outline: none;	
 }
 
-.button-outline:focus{
-	box-shadow: none;
-	outline: none;
+button.active{
+	background: rgba(0, 0, 0, 0.2);
 }
 
-.button-outline.active{
-	background: purple;
-	color: #fff;
-}
-
-
-
-.button-outline.is-disabled, .button-outline:disabled, .code-mode li button, button:disabled, .code-mode .button-outline.active{
+.button-transparent.is-disabled, .button-transparent:disabled, .code-mode li button, button:disabled, .code-mode .button-transparent.active{
 	color: #ddd;
 	opacity: 1;
 	cursor: not-allowed;

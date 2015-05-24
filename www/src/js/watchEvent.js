@@ -44,6 +44,11 @@ define([
 			button.update();
 		});
 
+		editor.addEventListener('keypress', function(ev){
+		    if(ev.keyCode == '13')
+		        document.execCommand('formatBlock', false, 'p');
+		}, false);
+
 		codeButton.addEventListener('click', function(e){
 			toggleCode.toggleCode(codeButton, container, editor);
 		})
